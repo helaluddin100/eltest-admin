@@ -362,6 +362,116 @@ body {
           }
         }
       }
+
+      .recent-file {
+        margin-top: 60px;
+
+        .grid-2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+
+          .section-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #505887;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .recent-upload {
+            font-family: var(--second-font);
+
+            ul {
+              li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 17px;
+
+                .left-element {
+                  display: flex;
+                  gap: 10px;
+
+                  .name-date {
+                    display: flex;
+                    align-items: center;
+
+                    h3 {
+                      font-size: 13px;
+                      font-weight: 400;
+                      color: #505887;
+                    }
+
+                    p {
+                      font-size: 10px;
+                      font-weight: 400;
+                      color: #718EBF;
+                    }
+                  }
+                }
+
+                .size {
+                  p {
+                    font-size: 10px;
+                    font-weight: 400;
+                    color: #718EBF;
+                  }
+                }
+              }
+            }
+          }
+
+          .file-manager {
+            font-family: var(--second-font);
+            padding-left: 50px;
+
+            .file-manager-wrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 30px;
+
+              .file-card {
+                border-radius: 8.994px;
+                background: #EBEDFB;
+                padding: 16px;
+
+                h3 {
+                  color: #000;
+                  font-size: 12.592px;
+                  font-weight: 400;
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                }
+
+                p {
+                  font-size: 8.994px;
+                  font-weight: 400;
+                }
+              }
+            }
+
+            .open-btn {
+              display: block;
+
+              a {
+                border-radius: 5px;
+                background: var(--pallet-1-grey, #DEE1E6);
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+
+
+        }
+
+
+      }
     }
   }
 }
