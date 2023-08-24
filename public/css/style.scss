@@ -63,10 +63,43 @@ body {
     grid-template-columns: 16% 60% 20%;
     gap: 2.5%;
     padding: 20px;
+    @media screen and (max-width: 1140px) {
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      z-index: 99;
+      top: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 1px 8px 20px 0px #59595917;
+    }
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 25% 45% 25%;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 10px;
+      grid-template-columns: 34% 45% 16%;
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     .logo-area {
       display: flex;
       align-items: center;
+      gap: 10px;
+
+      .left-toggle {
+        display: none;
+        cursor: pointer;
+        img {
+          width: 20px;
+        }
+
+        @media screen and (max-width: 1140px) {
+          display: block;
+        }
+      }
     }
 
     .search-filter {
@@ -74,6 +107,12 @@ body {
       grid-template-columns: 60% 30%;
       gap: 30px;
       align-items: center;
+      @media screen and (max-width: 992px) {
+        grid-template-columns: 100%;
+      }
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
 
       .search-bar {
         border: 1px solid #e0e0e0;
@@ -95,19 +134,23 @@ body {
           color: #7c8db5;
         }
       }
-
-      .filter-input {
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-        padding: 12px;
-        outline: none;
-
-        select {
-          width: 100%;
-          border: none;
+      .filter {
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
+        .filter-input {
+          border: 1px solid #e0e0e0;
+          border-radius: 5px;
+          padding: 12px;
           outline: none;
-          font-size: 15px;
-          color: #7c8db5;
+
+          select {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            color: #7c8db5;
+          }
         }
       }
     }
@@ -116,6 +159,10 @@ body {
       display: flex;
       align-items: center;
       gap: 20px;
+      @media screen and (max-width: 1140px) {
+        gap: 10px;
+        justify-content: end;
+      }
 
       .profile {
         display: flex;
@@ -123,6 +170,9 @@ body {
         gap: 10px;
 
         .name-eimail {
+          @media screen and (max-width: 1140px) {
+            display: none;
+          }
           a {
             font-size: 16px;
             font-weight: 700;
@@ -146,10 +196,32 @@ body {
     gap: 2.5%;
     padding-bottom: 30px;
     font-family: var(--second-font);
+    @media screen and (max-width: 1140px) {
+      grid-template-columns: 70% 27%;
+      margin-top: 75px;
+    }
 
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
     .left-sidebar {
       padding: 30px;
       border-right: 2px solid #f6f6f6;
+      transition: 0.3s;
+      padding-left: 10px;
+      @media screen and (max-width: 1200px) {
+        padding: 30px 0;
+      }
+      @media screen and (max-width: 1140px) {
+        position: fixed;
+        width: 250px;
+        top: 85px;
+        bottom: 0;
+        left: -100%;
+        background: #fff;
+        z-index: 2;
+      }
 
       ul {
         display: grid;
@@ -272,11 +344,31 @@ body {
         display: flex;
         align-items: center;
         gap: 25px;
+        overflow-x: scroll;
+        padding-bottom: 90px;
+
+        &::-webkit-scrollbar {
+          height: 0px;
+        }
+
+        @media screen and (max-width: 992px) {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          display: grid;
+        }
+        @media screen and (max-width: 768px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 450px) {
+          grid-template-columns: 1fr;
+        }
 
         .card-storage {
           padding: 20px;
-          width: 200px;
+          min-width: 200px;
           border-radius: 10px;
+          @media screen and (max-width: 992px) {
+            min-width: 100%;
+          }
 
           .card-inner {
             h4 {
@@ -285,6 +377,9 @@ body {
               color: #505887;
               margin-top: 21px;
               margin-bottom: 13px;
+              @media screen and (max-width: 900px) {
+                margin-top: 5px;
+              }
             }
 
             .file-toggle {
@@ -312,7 +407,7 @@ body {
       }
 
       .quick-access {
-        margin-top: 60px;
+        margin-top: -30px;
 
         .section-title {
           font-size: 19px;
@@ -325,6 +420,13 @@ body {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 20px;
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          @media screen and (max-width: 450px) {
+            grid-template-columns: 1fr;
+          }
 
           .access-card {
             border-radius: 15px;
@@ -366,7 +468,11 @@ body {
         .grid-2 {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 30px;
+          gap: 20px;
+
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+          }
 
           .section-title {
             font-size: 19px;
@@ -424,6 +530,9 @@ body {
           .file-manager {
             font-family: var(--second-font);
             padding-left: 50px;
+            @media screen and (max-width: 768px) {
+              padding-left: 0;
+            }
 
             .file-manager-wrapper {
               display: grid;
@@ -539,6 +648,9 @@ body {
 
     .invite-area {
       margin-top: 100px;
+      @media screen and (max-width: 992px) {
+        margin-top: 50px;
+      }
       .invite-dev {
         position: relative;
         height: 125px;
@@ -556,12 +668,17 @@ body {
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
-
           height: 100%;
           display: grid;
           align-items: center;
           border-radius: 10px;
           padding: 20px;
+
+          @media screen and (max-width: 992px) {
+            top: -10px;
+            left: -10px;
+            width: 100%;
+          }
           .inner-content {
             width: 60%;
             z-index: 1;
