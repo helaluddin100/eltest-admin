@@ -56,7 +56,6 @@ body {
   //   ====================Header===============
   header {
     border-bottom: 2px solid #f6f6f6;
-
   }
 
   .navigation {
@@ -294,7 +293,6 @@ body {
 
               .toggle {
                 cursor: pointer;
-
               }
             }
 
@@ -305,12 +303,11 @@ body {
 
               p {
                 font-size: 12px;
-                color: #718EBF;
+                color: #718ebf;
                 font-weight: 400;
               }
             }
           }
-
         }
       }
 
@@ -343,7 +340,7 @@ body {
               align-items: center;
               gap: 10px;
               position: absolute;
-              background: #F5F5F5;
+              background: #f5f5f5;
               bottom: 0;
               left: 0;
               right: 0;
@@ -408,7 +405,7 @@ body {
                     p {
                       font-size: 10px;
                       font-weight: 400;
-                      color: #718EBF;
+                      color: #718ebf;
                     }
                   }
                 }
@@ -417,7 +414,7 @@ body {
                   p {
                     font-size: 10px;
                     font-weight: 400;
-                    color: #718EBF;
+                    color: #718ebf;
                   }
                 }
               }
@@ -435,7 +432,7 @@ body {
 
               .file-card {
                 border-radius: 8.994px;
-                background: #EBEDFB;
+                background: #ebedfb;
                 padding: 16px;
 
                 h3 {
@@ -455,22 +452,27 @@ body {
 
             .open-btn {
               display: block;
+              margin-top: 20px;
 
               a {
                 border-radius: 5px;
-                background: var(--pallet-1-grey, #DEE1E6);
+                background: var(--pallet-1-grey, #dee1e6);
                 width: 100%;
                 padding: 10px;
                 font-size: 14px;
                 font-weight: 400;
+                display: block;
+                text-align: center;
+                transition: 0.3s;
+
+                &:hover {
+                  background: #51459e;
+                  color: #fff;
+                }
               }
             }
           }
-
-
         }
-
-
       }
     }
   }
