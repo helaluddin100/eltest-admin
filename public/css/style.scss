@@ -402,6 +402,7 @@ body {
 
     .main-content {
       padding-top: 30px;
+      grid-template-columns: fr;
 
       .storage-card-area {
         display: flex;
