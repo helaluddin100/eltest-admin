@@ -14,7 +14,7 @@
           <div class="container">
             <nav class="navigation">
               <div class="logo-area">
-                <div class="left-toggle">
+                <div class="left-toggle" onclick="toggleSidebar()">
                   <img src="public/img/icon/menu.svg" alt="" />
                 </div>
                 <a href="" class="logo"
@@ -102,7 +102,7 @@
         <div class="main">
           <div class="container">
             <div class="body-grid">
-              <div class="left-sidebar">
+              <div class="left-sidebar" id="leftSidebar">
                 <div class="side-bar-main">
                   <ul>
                     <li>
@@ -1104,5 +1104,11 @@
       </div>
     </div>
     <script type="module" src="/main.js"></script>
+    <script>
+      function toggleSidebar() {
+        var element = document.getElementById("leftSidebar");
+        element.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
