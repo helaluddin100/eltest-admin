@@ -142,7 +142,7 @@ body {
   //   ===============main================
   .body-grid {
     display: grid;
-    grid-template-columns: 16% 60% 20%;
+    grid-template-columns: 16% 55% 25%;
     gap: 2.5%;
     padding-bottom: 30px;
     font-family: var(--second-font);
@@ -470,6 +470,115 @@ body {
                   color: #fff;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-sidebar {
+    padding: 30px 0;
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #25396f;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chart-area {
+      margin-bottom: 60px;
+      img {
+        width: 100%;
+      }
+    }
+    .recent-upload {
+      font-family: var(--second-font);
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 17px;
+
+          .left-element {
+            display: flex;
+            gap: 10px;
+
+            .name-date {
+              display: flex;
+              align-items: center;
+
+              h3 {
+                font-size: 13px;
+                font-weight: 400;
+                color: #505887;
+              }
+
+              p {
+                font-size: 10px;
+                font-weight: 400;
+                color: #718ebf;
+              }
+            }
+          }
+
+          .size {
+            p {
+              font-size: 10px;
+              font-weight: 400;
+              color: #718ebf;
+            }
+          }
+        }
+      }
+    }
+
+    .invite-area {
+      margin-top: 100px;
+      .invite-dev {
+        position: relative;
+        height: 125px;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px dashed #d0c9ff;
+        background: #f6f4ff;
+
+        .invite-content {
+          position: absolute;
+          top: -35px;
+          left: -35px;
+          width: 100%;
+          background-image: url(../img/invite-bg.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+
+          height: 100%;
+          display: grid;
+          align-items: center;
+          border-radius: 10px;
+          padding: 20px;
+          .inner-content {
+            width: 60%;
+            z-index: 1;
+            p {
+              font-size: 16px;
+              font-weight: 400;
+              color: #fff;
+            }
+            a {
+              border-radius: 5px;
+              background: var(--pallet-1-secondary, #84e8f4);
+              padding: 5px 13px;
+              display: inline-block;
+              margin-top: 10px;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
             }
           }
         }
