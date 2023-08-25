@@ -63,6 +63,7 @@ body {
     grid-template-columns: 16% 60% 20%;
     gap: 2.5%;
     padding: 20px;
+
     @media screen and (max-width: 1140px) {
       position: fixed;
       width: 100%;
@@ -73,13 +74,16 @@ body {
       right: 0;
       box-shadow: 1px 8px 20px 0px #59595917;
     }
+
     @media screen and (max-width: 992px) {
       grid-template-columns: 25% 45% 25%;
     }
+
     @media screen and (max-width: 768px) {
       padding: 10px;
       grid-template-columns: 34% 45% 16%;
     }
+
     @media screen and (max-width: 576px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -92,6 +96,7 @@ body {
       .left-toggle {
         display: none;
         cursor: pointer;
+
         img {
           width: 20px;
         }
@@ -107,9 +112,11 @@ body {
       grid-template-columns: 60% 30%;
       gap: 30px;
       align-items: center;
+
       @media screen and (max-width: 992px) {
         grid-template-columns: 100%;
       }
+
       @media screen and (max-width: 576px) {
         display: none;
       }
@@ -134,10 +141,12 @@ body {
           color: #7c8db5;
         }
       }
+
       .filter {
         @media screen and (max-width: 992px) {
           display: none;
         }
+
         .filter-input {
           border: 1px solid #e0e0e0;
           border-radius: 5px;
@@ -163,6 +172,7 @@ body {
       display: flex;
       align-items: center;
       gap: 20px;
+
       @media screen and (max-width: 1140px) {
         gap: 10px;
         justify-content: end;
@@ -177,6 +187,7 @@ body {
           @media screen and (max-width: 1140px) {
             display: none;
           }
+
           a {
             font-size: 16px;
             font-weight: 700;
@@ -200,6 +211,7 @@ body {
     gap: 2.5%;
     padding-bottom: 30px;
     font-family: var(--second-font);
+
     @media screen and (max-width: 1140px) {
       grid-template-columns: 70% 27%;
       margin-top: 75px;
@@ -209,14 +221,17 @@ body {
       grid-template-columns: 1fr;
       gap: 0;
     }
+
     .left-sidebar {
       padding: 30px;
       border-right: 2px solid #f6f6f6;
       transition: 0.3s;
       padding-left: 10px;
+
       @media screen and (max-width: 1200px) {
         padding: 30px 0;
       }
+
       @media screen and (max-width: 1140px) {
         position: fixed;
         width: 250px;
@@ -248,6 +263,7 @@ body {
             font-weight: 400;
             color: #7987a5;
             transition: 0.3s;
+
             &.active {
               .icon {
                 &:before {
@@ -306,6 +322,7 @@ body {
               margin-bottom: 10px;
               transition: 0.3s;
               position: relative;
+
               &:active {
                 &:before {
                   width: 20px;
@@ -367,6 +384,7 @@ body {
           height: 8px;
           background: #eceff7;
           border-radius: 10px;
+
           .bar {
             height: 100%;
             background: #ff1087;
@@ -380,6 +398,7 @@ body {
         justify-content: center;
         margin-top: 50px;
         padding: 0 10px;
+
         @media screen and (max-width: 1140px) {
           margin-top: 10px;
         }
@@ -412,16 +431,21 @@ body {
         padding-bottom: 90px;
 
         &::-webkit-scrollbar {
-          height: 10px;
+          width: 1em;
+          height: 0px;
+
         }
+
 
         @media screen and (max-width: 992px) {
           grid-template-columns: 1fr 1fr 1fr 1fr;
           display: grid;
         }
+
         @media screen and (max-width: 768px) {
           grid-template-columns: 1fr 1fr;
         }
+
         @media screen and (max-width: 450px) {
           grid-template-columns: 1fr;
         }
@@ -430,9 +454,11 @@ body {
           padding: 20px;
           min-width: 200px;
           border-radius: 10px;
+
           @media screen and (max-width: 992px) {
             min-width: 100%;
           }
+
           &:hover {
             .card-inner {
               .name-size {
@@ -453,6 +479,7 @@ body {
               color: #505887;
               margin-top: 21px;
               margin-bottom: 13px;
+
               @media screen and (max-width: 900px) {
                 margin-top: 5px;
               }
@@ -487,6 +514,10 @@ body {
         margin-top: -30px;
         padding-right: 20px;
 
+        @media screen and (max-width:992px) {
+          padding-right: 0;
+        }
+
         .section-title {
           font-size: 19px;
           font-weight: 700;
@@ -498,6 +529,7 @@ body {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 20px;
+
           @media screen and (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
           }
@@ -543,6 +575,10 @@ body {
       .recent-file {
         margin-top: 60px;
         padding-right: 30px;
+
+        @media screen and (max-width:992px) {
+          padding-right: 0;
+        }
 
         .grid-2 {
           display: grid;
@@ -609,6 +645,7 @@ body {
           .file-manager {
             font-family: var(--second-font);
             padding-left: 50px;
+
             @media screen and (max-width: 768px) {
               padding-left: 0;
             }
@@ -664,6 +701,7 @@ body {
       }
     }
   }
+
   .right-sidebar {
     padding: 30px 0;
 
@@ -676,12 +714,15 @@ body {
       justify-content: space-between;
       align-items: center;
     }
+
     .chart-area {
       margin-bottom: 60px;
+
       img {
         width: 100%;
       }
     }
+
     .recent-upload {
       font-family: var(--second-font);
 
@@ -727,9 +768,11 @@ body {
 
     .invite-area {
       margin-top: 100px;
+
       @media screen and (max-width: 992px) {
         margin-top: 50px;
       }
+
       .invite-dev {
         position: relative;
         height: 125px;
@@ -758,14 +801,17 @@ body {
             left: -10px;
             width: 100%;
           }
+
           .inner-content {
             width: 60%;
             z-index: 1;
+
             p {
               font-size: 16px;
               font-weight: 400;
               color: #fff;
             }
+
             a {
               border-radius: 5px;
               background: var(--pallet-1-secondary, #84e8f4);
